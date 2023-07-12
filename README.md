@@ -9,4 +9,5 @@ Topics are:-
 5. Sorting
 6. Searching
 7. Graphs
+8. Trees
 Most of the content can be referred from Programz
