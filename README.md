@@ -1,2 +1,3 @@
 # DSA
-All DSA topics included in this repository
+
+All DSA topics included in this repository.
