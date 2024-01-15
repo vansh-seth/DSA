@@ -232,13 +232,11 @@ Before using these operations, make sure to understand the basics of linked list
 
 # Types of Linked List
 
-Before diving into the details of different types of linked lists, ensure you have a basic understanding of the [LinkedList Data Structure](#).
-
 ## 1. Singly Linked List
 
-![Singly Linked List](singly_linked_list.png)
-
 A singly linked list is the most common type. Each node contains data and a pointer to the next node.
+
+![image](https://github.com/vansh-seth/DSA/assets/111755254/4f47d15f-43c6-4f6f-8dd3-c2a403629a3f)
 
 ### Node Representation:
 ```c
@@ -277,7 +275,7 @@ head = one;
 
 ## 2. Doubly Linked List
 
-![Doubly Linked List](doubly_linked_list.png)
+![image](https://github.com/vansh-seth/DSA/assets/111755254/84b74aa6-be51-49a4-abf4-bdb7d612bb93)
 
 A doubly linked list extends the singly linked list by adding a pointer to the previous node. This allows traversal in both forward and backward directions.
 
@@ -322,11 +320,10 @@ three->prev = two;
 head = one;
 ```
 
-For more details on operations, visit [doubly linked list and operations on it](#).
 
 ## 3. Circular Linked List
 
-![Circular Linked List](circular_linked_list.png)
+![image](https://github.com/vansh-seth/DSA/assets/111755254/b8108087-b22d-4f39-966d-c38182e93e59)
 
 A circular linked list is a variation where the last element is linked to the first element, forming a circular loop.
 
@@ -357,4 +354,3 @@ three->next = one;
 head = one;
 ```
 
-For more details on operations, visit [circular linked list and operations on it](#).
