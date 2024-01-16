@@ -6,7 +6,7 @@ Topics are:-
 
 1. Structure
 2. Linked list
-3. stack
+3. Stack
 4. Queue
 5. Sorting
 6. Searching
