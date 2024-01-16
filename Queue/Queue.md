@@ -251,3 +251,98 @@ Some applications of a priority queue include:
 - Load balancing and interrupt handling in an operating system
 - Data compression in Huffman code
 
+## Deque (Double-Ended Queue) Data Structure
+
+A Deque, or Double Ended Queue, is a type of queue where insertion and removal of elements can be performed from either the front or the rear, not following the FIFO (First In First Out) rule.
+
+## Representation of Deque
+
+![image](https://github.com/vansh-seth/DSA/assets/111755254/777a7762-b39d-402a-b9bf-f0a1bf466731)
+
+### Types of Deque
+
+1. **Input Restricted Deque:**
+   - Input is restricted at a single end but allows deletion at both ends.
+
+2. **Output Restricted Deque:**
+   - Output is restricted at a single end but allows insertion at both ends.
+
+## Operations on a Deque
+
+Below is the circular array implementation of a deque. In a circular array, if the array is full, we start from the beginning.
+
+### Initialization
+1. Take an array (deque) of size n.
+2. Set two pointers at the first position and set `front = -1` and `rear = 0`.
+
+![image](https://github.com/vansh-seth/DSA/assets/111755254/7efc5097-3454-468d-a819-d5fe0f93c68c)
+
+### 1. Insert at the Front
+
+![image](https://github.com/vansh-seth/DSA/assets/111755254/ba8fb70b-4b99-46a1-abdb-761c558e95de)
+
+- If `front < 1`, reinitialize `front = n-1` (last index).
+
+![image](https://github.com/vansh-seth/DSA/assets/111755254/918063f0-72de-4557-a027-185e1eefb5b7)
+
+- Else, decrease `front` by 1.
+- Add the new element at the position of `front`.
+
+![image](https://github.com/vansh-seth/DSA/assets/111755254/4c7f9542-2abd-4ba3-988e-a6f947e17bc4)
+
+### 2. Insert at the Rear
+- Check if the deque is full.
+
+![image](https://github.com/vansh-seth/DSA/assets/111755254/868bbed1-9dc3-4322-90a4-061a82fed431)
+
+- If the deque is full, reinitialize `rear = 0`.
+- Else, increase `rear` by 1.
+
+![image](https://github.com/vansh-seth/DSA/assets/111755254/bdc21389-7075-4fab-b9b6-0e1c596089f2)
+
+- Add the new element at the position of `rear`.
+
+![image](https://github.com/vansh-seth/DSA/assets/111755254/ef118c62-610f-47dc-8e78-78f6b66e1fac)
+
+
+### 3. Delete from the Front
+- Check if the deque is empty.
+
+![image](https://github.com/vansh-seth/DSA/assets/111755254/bb8cfcdf-1153-42db-bde2-72226e508dbb)
+
+- If the deque is empty (i.e., `front = -1`), deletion cannot be performed (underflow condition).
+- If the deque has only one element (i.e., `front = rear`), set `front = -1` and `rear = -1`.
+- Else if `front` is at the end (i.e., `front = n - 1`), set `front = 0`.
+- Else, `front = front + 1`.
+
+![image](https://github.com/vansh-seth/DSA/assets/111755254/1408bf16-352e-4cc6-bea0-f3d491171d0a)
+
+### 4. Delete from the Rear
+- Check if the deque is empty.
+
+![image](https://github.com/vansh-seth/DSA/assets/111755254/aa9875a0-f168-4712-909b-6271333c229b)
+
+- If the deque is empty (i.e., `front = -1`), deletion cannot be performed (underflow condition).
+- If the deque has only one element (i.e., `front = rear`), set `front = -1` and `rear = -1`, else follow the steps below.
+- If `rear` is at the front (i.e., `rear = 0`), set `rear = n - 1`.
+- Else, `rear = rear - 1`.
+
+![image](https://github.com/vansh-seth/DSA/assets/111755254/e7353692-bd17-40fc-b21f-9ecf1f9746ba)
+
+### 5. Check Empty
+This operation checks if the deque is empty. If `front = -1`, the deque is empty.
+
+### 6. Check Full
+This operation checks if the deque is full. If `front = 0` and `rear = n - 1` OR `front = rear + 1`, the deque is full.
+
+## Time Complexity
+
+The time complexity of all the above operations is constant, i.e., O(1).
+
+## Applications of Deque Data Structure
+
+Some applications of a deque data structure include:
+
+- Undo operations on software.
+- Storing history in browsers.
+- Implementing both stacks and queues.
