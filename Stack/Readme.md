@@ -44,3 +44,5 @@ For the array-based implementation of a stack, the push and pop operations take 
 1. **Reversing a Word:** Put all the letters in a stack and pop them out to get the letters in reverse order.
 2. **Compilers:** Compilers use the stack to evaluate expressions by converting them to prefix or postfix form.
 3. **Browsers:** The back button in browsers uses a stack to keep track of visited URLs, allowing navigation in reverse order.
+
+## Please refer to my infix-postfix-prefix.md to learn about infix postfix, prefix 
