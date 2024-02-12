@@ -110,3 +110,47 @@ end selectionSort
 - Selection sort has a time complexity of O(n^2) in all cases (best, worst, and average).
 - It's an in-place sorting algorithm, meaning it sorts the array without needing additional space.
 - Despite its simplicity, selection sort is not the most efficient algorithm for large datasets. However, it can be useful for small datasets or as an educational tool.
+
+## Understanding Selection Sort Complexity
+
+Selection sort is a straightforward sorting algorithm that repeatedly selects the smallest element from an unsorted portion of the list and places it at the beginning. Let's explore its complexity and applications.
+
+### Time Complexity
+
+- **Best Case (O(n^2))**: Occurs when the array is already sorted. Despite being sorted, the algorithm still iterates through the array, resulting in the same number of comparisons and swaps as in the worst case.
+- **Worst Case (O(n^2))**: Happens when the array is in reverse order, requiring the maximum number of comparisons and swaps.
+- **Average Case (O(n^2))**: In scenarios where the elements are randomly arranged, selection sort typically performs with this complexity.
+
+### Space Complexity
+
+- **Space Complexity (O(1))**: Selection sort is an in-place sorting algorithm, meaning it doesn't require additional space proportional to the size of the input. It only uses a constant amount of extra space for variables used in swapping elements.
+
+### Complexity Analysis
+
+The time complexity of selection sort stems from the number of comparisons and swaps needed to sort the array. At each step, the algorithm iterates through the unsorted portion to find the minimum element, resulting in \( n(n-1)/2 \) comparisons in total, which simplifies to \( O(n^2) \).
+
+### Selection Sort Applications
+
+Selection sort finds application in scenarios where:
+
+- Sorting a small list is necessary.
+- The cost of swapping elements is not a significant concern.
+- It's crucial to check all elements in the list.
+- The write cost to memory matters, such as in flash memory, where the number of writes/swaps is \( O(n) \) compared to \( O(n^2) \) in bubble sort.
+
+### Code Sample
+
+Here's a basic representation of the selection sort algorithm in Python:
+
+```python
+def selectionSort(array):
+    n = len(array)
+    for i in range(n - 1):
+        min_index = i
+        for j in range(i + 1, n):
+            if array[j] < array[min_index]:
+                min_index = j
+        array[i], array[min_index] = array[min_index], array[i]
+```
+
+This code snippet demonstrates how selection sort works by iteratively finding the smallest element in the unsorted portion and swapping it with the first unsorted element. Despite its simplicity, selection sort can be useful in specific scenarios as outlined above.
