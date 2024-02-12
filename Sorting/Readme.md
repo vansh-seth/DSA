@@ -24,12 +24,12 @@ Much like air bubbles rising to the surface of water, elements in the list gradu
 
 Here's a simple representation of the bubble sort algorithm:
 
-```python
-def bubbleSort(array):
-    for i in range(len(array)-1):
-        for j in range(len(array)-i-1):
-            if array[j] > array[j+1]:
-                array[j], array[j+1] = array[j+1], array[j]
+```
+bubbleSort(array)
+  for i <- 1 to indexOfLastUnsortedElement-1
+    if leftElement > rightElement
+      swap leftElement and rightElement
+end bubbleSort
 ```
 
 - The outer loop iterates through each element of the array.
