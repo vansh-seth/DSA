@@ -66,3 +66,47 @@ Bubble sort, while inefficient for large datasets, finds utility in situations w
 
 - Complexity is not a critical factor.
 - Simplicity and readability of code are preferred over optimization.
+
+
+## Selection Sort Algorithm 
+
+Selection sort is a simple sorting algorithm that repeatedly selects the smallest element from an unsorted portion of the list and moves it to the beginning of the list. It continues this process until the entire list is sorted.
+
+### How Selection Sort Works
+
+1. **Selecting the Minimum Element**:
+   - Initially, the first element of the unsorted list is considered the minimum.
+   - The algorithm compares this minimum with each subsequent element to find the smallest element in the unsorted portion.
+   - If a smaller element is found, it becomes the new minimum.
+
+2. **Placing the Minimum Element**:
+   - After identifying the minimum element in the unsorted portion, it swaps the minimum element with the first unsorted element.
+   - This process effectively moves the minimum element to its correct position at the beginning of the list.
+
+3. **Iterative Process**:
+   - The above steps are repeated for each element of the unsorted portion until the entire list is sorted.
+
+### Selection Sort Algorithm
+
+Here's a basic representation of the selection sort algorithm:
+
+```python
+def selectionSort(array):
+    n = len(array)
+    for i in range(n - 1):
+        min_index = i
+        for j in range(i + 1, n):
+            if array[j] < array[min_index]:
+                min_index = j
+        array[i], array[min_index] = array[min_index], array[i]
+```
+
+- The outer loop iterates through each element of the array.
+- Within each iteration, the inner loop finds the minimum element in the unsorted portion.
+- Once the minimum element is identified, it's swapped with the first unsorted element.
+
+### Key Points
+
+- Selection sort has a time complexity of O(n^2) in all cases (best, worst, and average).
+- It's an in-place sorting algorithm, meaning it sorts the array without needing additional space.
+- Despite its simplicity, selection sort is not the most efficient algorithm for large datasets. However, it can be useful for small datasets or as an educational tool.
