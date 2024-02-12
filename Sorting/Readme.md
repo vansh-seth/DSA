@@ -138,19 +138,3 @@ Selection sort finds application in scenarios where:
 - It's crucial to check all elements in the list.
 - The write cost to memory matters, such as in flash memory, where the number of writes/swaps is \( O(n) \) compared to \( O(n^2) \) in bubble sort.
 
-### Code Sample
-
-Here's a basic representation of the selection sort algorithm in Python:
-
-```python
-def selectionSort(array):
-    n = len(array)
-    for i in range(n - 1):
-        min_index = i
-        for j in range(i + 1, n):
-            if array[j] < array[min_index]:
-                min_index = j
-        array[i], array[min_index] = array[min_index], array[i]
-```
-
-This code snippet demonstrates how selection sort works by iteratively finding the smallest element in the unsorted portion and swapping it with the first unsorted element. Despite its simplicity, selection sort can be useful in specific scenarios as outlined above.
