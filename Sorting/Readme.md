@@ -248,3 +248,60 @@ Insertion sort is suitable for situations where:
 
 - The array size is small.
 - The majority of the array is already sorted or nearly sorted.
+
+# Merge Sort Algorithm
+
+Merge Sort stands out as one of the most widely used sorting algorithms, operating on the principle of Divide and Conquer. This approach involves breaking down a problem into smaller, more manageable sub-problems, solving them individually, and then combining the solutions to achieve the final result.
+
+## Overview of Merge Sort
+
+Merge Sort begins by dividing the array into two equal halves, and this process continues recursively until each sub-array contains only one element, which is inherently sorted. Then, the merge operation kicks in, combining the sorted sub-arrays to create larger sorted arrays until the entire array is sorted.
+
+### Divide and Conquer Strategy
+
+1. **Divide**: Split the array into two halves, typically by finding the midpoint.
+2. **Conquer**: Recursively sort each half of the array.
+3. **Combine**: Merge the sorted halves to produce the final sorted array.
+
+## Merge Sort Algorithm
+
+The MergeSort function recursively divides the array into halves until each sub-array has only one element. Then, it employs the merge function to merge the sorted sub-arrays into larger sorted arrays.
+
+```plaintext
+MergeSort(array, p, r):
+    if p < r:
+        q = (p + r) / 2
+        MergeSort(array, p, q)
+        MergeSort(array, q + 1, r)
+        Merge(array, p, q, r)
+```
+
+To sort the entire array, call `MergeSort(array, 0, length(array) - 1)`.
+
+## The Merge Step
+
+The merge step is crucial in the Merge Sort algorithm. It involves merging two sorted arrays to produce a larger sorted array. The algorithm maintains pointers for both arrays and a current index for the final sorted array, combining elements from both arrays while maintaining the order.
+
+```plaintext
+Merge(array, p, q, r):
+    // Create duplicate copies of subarrays L ← array[p..q] and M ← array[q+1..r]
+    // Maintain indices i, j, and k
+    // Compare elements from L and M, placing the smaller one into the main array
+    // Copy remaining elements from L and M into the main array
+```
+
+## Code Implementation
+
+The merge function works by creating copies of the subarrays to be merged, then systematically comparing elements from both arrays and placing them into the main array in sorted order.
+
+### Example
+
+Let's visualize the merge step with an example:
+
+- Given two sorted subarrays: `[1, 5, 10, 12]` and `[6, 9]`
+- We create duplicate copies of these subarrays.
+- Using pointers, we compare elements from both arrays and merge them into a single sorted array: `[1, 5, 6, 9, 10, 12]`.
+
+## Conclusion
+
+Merge Sort's efficiency, stability, and simplicity make it a popular choice for sorting large datasets. Its divide and conquer approach ensures a time complexity of \(O(n \log n)\) in all cases, making it suitable for various applications where sorting is necessary.
