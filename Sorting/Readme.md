@@ -138,3 +138,76 @@ Selection sort finds application in scenarios where:
 - It's crucial to check all elements in the list.
 - The write cost to memory matters, such as in flash memory, where the number of writes/swaps is \( O(n) \) compared to \( O(n^2) \) in bubble sort.
 
+# Insertion Sort Algorithm
+
+Insertion sort is a simple and efficient sorting algorithm that works by iteratively placing unsorted elements in their correct positions within a sorted portion of the array. This algorithm is often likened to arranging a hand of cards in a card game.
+
+## How Insertion Sort Works
+
+1. **Initialization**: The first element in the array is considered sorted.
+2. **Iterative Sorting**:
+   - Take an unsorted element and store it separately.
+   - Compare the unsorted element with elements in the sorted portion.
+   - Place the unsorted element in its suitable position within the sorted portion.
+3. **Repeat**: Continue this process until all elements are sorted.
+
+## Example:
+
+Suppose we have an array `[5, 2, 4, 6, 1, 3]` that we want to sort using insertion sort.
+
+### Initial array:
+```
+[5, 2, 4, 6, 1, 3]
+```
+
+1. **First Pass**:
+   - The first element, 5, is assumed to be sorted.
+   - Take 2 and compare with 5, place it before 5.
+     ```
+     [2, 5, 4, 6, 1, 3]
+     ```
+   - The first two elements are now sorted.
+   
+2. **Second Pass**:
+   - Take 4, compare with elements on its left, place it after 2.
+     ```
+     [2, 4, 5, 6, 1, 3]
+     ```
+   - The first three elements are now sorted.
+   
+3. **Third Pass**:
+   - Take 6, compare with elements on its left, place it after 5.
+     ```
+     [2, 4, 5, 6, 1, 3]
+     ```
+   - The first four elements are now sorted.
+   
+4. **Fourth Pass**:
+   - Take 1, compare with elements on its left, place it before 2.
+     ```
+     [1, 2, 4, 5, 6, 3]
+     ```
+   - The first five elements are now sorted.
+   
+5. **Fifth Pass**:
+   - Take 3, compare with elements on its left, place it after 2.
+     ```
+     [1, 2, 3, 4, 5, 6]
+     ```
+   - The array is now completely sorted.
+
+## Insertion Sort Algorithm (Pseudocode)
+
+```plaintext
+insertionSort(array)
+  // mark first element as sorted
+  for each unsorted element X
+    // extract the element X
+    for j <- lastSortedIndex down to 0
+      if current element j > X
+        move sorted element to the right by 1
+    // break loop and insert X here
+end insertionSort
+```
+
+This pseudocode outlines the steps involved in insertion sort. It iterates through the array, placing each unsorted element in its correct position among the sorted elements.
