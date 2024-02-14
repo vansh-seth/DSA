@@ -335,3 +335,57 @@ Merge Sort finds applications in various domains, including:
 - **External Sorting:** Sorting large datasets that cannot fit entirely into memory.
 - **E-commerce Applications:** Sorting product listings, user preferences, and order histories efficiently.
 
+# Quicksort Algorithm
+
+Quicksort is a highly efficient sorting algorithm based on the divide and conquer strategy. It works by selecting a pivot element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. The process continues recursively until the entire array is sorted.
+
+## Working of Quicksort Algorithm
+
+1. **Select the Pivot Element**:
+   - The rightmost element of the array is often chosen as the pivot element.
+
+2. **Rearrange the Array**:
+   - Elements smaller than the pivot are placed to its left, and elements greater than the pivot are placed to its right.
+
+3. **Divide Subarrays**:
+   - The array is divided into two subarrays, each with its own pivot element. This process continues recursively until each subarray contains a single element, making them inherently sorted.
+
+## Quicksort Algorithm Pseudocode
+
+```plaintext
+quickSort(array, leftmostIndex, rightmostIndex)
+  if (leftmostIndex < rightmostIndex)
+    pivotIndex <- partition(array, leftmostIndex, rightmostIndex)
+    quickSort(array, leftmostIndex, pivotIndex - 1)
+    quickSort(array, pivotIndex + 1, rightmostIndex)
+
+partition(array, leftmostIndex, rightmostIndex)
+  pivotElement <- array[rightmostIndex]
+  storeIndex <- leftmostIndex - 1
+  for i <- leftmostIndex to rightmostIndex - 1
+    if array[i] < pivotElement
+      swap array[i] and array[storeIndex + 1]
+      storeIndex++
+  swap array[rightmostIndex] and array[storeIndex + 1]
+  return storeIndex + 1
+```
+
+## Visual Illustration
+
+Quicksort operates by recursively sorting subarrays. The left and right subarrays are sorted independently using the same approach.
+
+- **Sorting the left subarray recursively**:
+  ![Sorting the left subarray](left_subarray_sort.png)
+
+- **Sorting the right subarray recursively**:
+  ![Sorting the right subarray](right_subarray_sort.png)
+
+## Applications of Quicksort
+
+Quicksort finds application in various scenarios, especially when efficiency is crucial. Some common applications include:
+
+- Sorting large datasets efficiently.
+- Implementing data structures like priority queues and associative arrays.
+- Partitioning in various algorithms like quick select.
+
+Quicksort's average time complexity of \( O(n \log n) \) makes it a preferred choice for many sorting tasks. Its ability to efficiently handle large datasets and stability in performance across different scenarios contribute to its popularity.
