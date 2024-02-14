@@ -302,6 +302,3 @@ Let's visualize the merge step with an example:
 - We create duplicate copies of these subarrays.
 - Using pointers, we compare elements from both arrays and merge them into a single sorted array: `[1, 5, 6, 9, 10, 12]`.
 
-## Conclusion
-
-Merge Sort's efficiency, stability, and simplicity make it a popular choice for sorting large datasets. Its divide and conquer approach ensures a time complexity of \(O(n \log n)\) in all cases, making it suitable for various applications where sorting is necessary.
