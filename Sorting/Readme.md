@@ -302,3 +302,36 @@ Let's visualize the merge step with an example:
 - We create duplicate copies of these subarrays.
 - Using pointers, we compare elements from both arrays and merge them into a single sorted array: `[1, 5, 6, 9, 10, 12]`.
 
+# Merge Sort Complexity
+
+Merge Sort is renowned for its efficient time complexity and stability, making it a popular choice for sorting large datasets.
+
+## Time Complexity
+
+- **Best Case:** \( O(n \log n) \)
+- **Worst Case:** \( O(n \log n) \)
+- **Average Case:** \( O(n \log n) \)
+
+### Explanation:
+
+- **Best Case Complexity:** \( O(n \log n) \)
+  - Even in the best-case scenario where the input array is already sorted, Merge Sort requires \( O(n \log n) \) time due to its divide-and-conquer strategy.
+
+- **Worst Case Complexity:** \( O(n \log n) \)
+  - In the worst-case scenario, Merge Sort still performs efficiently with a time complexity of \( O(n \log n) \). This consistency is a significant advantage over other sorting algorithms.
+
+- **Average Case Complexity:** \( O(n \log n) \)
+  - The average case time complexity of Merge Sort remains \( O(n \log n) \), making it a reliable choice for a wide range of datasets.
+
+## Space Complexity
+
+Merge Sort has a space complexity of \( O(n) \), primarily due to the additional memory required for creating temporary arrays during the merge step. Despite this space overhead, Merge Sort remains a practical choice for sorting large datasets due to its efficient time complexity.
+
+## Applications
+
+Merge Sort finds applications in various domains, including:
+
+- **Inversion Count Problem:** Determining the number of inversions in an array.
+- **External Sorting:** Sorting large datasets that cannot fit entirely into memory.
+- **E-commerce Applications:** Sorting product listings, user preferences, and order histories efficiently.
+
