@@ -370,3 +370,37 @@ partition(array, leftmostIndex, rightmostIndex)
   return storeIndex + 1
 ```
 
+# Quicksort Complexity
+
+Quicksort is a widely used sorting algorithm known for its efficiency, although it exhibits varying time complexity based on different scenarios.
+
+## Time Complexity
+
+- **Best Case:** \( O(n \log n) \)
+- **Worst Case:** \( O(n^2) \)
+- **Average Case:** \( O(n \log n) \)
+
+### Explanation:
+
+- **Worst Case Complexity [Big-O]: \( O(n^2) \)**
+  - This scenario arises when the pivot element selected is either the smallest or largest in the array. Consequently, one sub-array remains empty, leading to a recursive call on a sub-array with \( n - 1 \) elements. However, this situation is less likely with well-scattered pivots.
+
+- **Best Case Complexity [Big-omega]: \( O(n \log n) \)**
+  - The best-case scenario occurs when the pivot element consistently lies in or near the middle of the array. This results in balanced partitioning, leading to optimal performance.
+
+- **Average Case Complexity [Big-theta]: \( O(n \log n) \)**
+  - In typical scenarios where the pivot element's position varies, quicksort demonstrates an average time complexity of \( O(n \log n) \).
+
+## Space Complexity
+
+The space complexity of quicksort is \( O(\log n) \), primarily due to the recursive nature of the algorithm and the space required for the call stack.
+
+## Quicksort Applications
+
+Quicksort finds application in situations where:
+
+- The programming language supports recursion efficiently.
+- Time complexity is a critical factor in sorting.
+- Space complexity is also a significant consideration.
+
+Quicksort's adaptability to various scenarios and its average-case time complexity of \( O(n \log n) \) make it a preferred choice in many sorting tasks.
