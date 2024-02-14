@@ -370,22 +370,3 @@ partition(array, leftmostIndex, rightmostIndex)
   return storeIndex + 1
 ```
 
-## Visual Illustration
-
-Quicksort operates by recursively sorting subarrays. The left and right subarrays are sorted independently using the same approach.
-
-- **Sorting the left subarray recursively**:
-  ![Sorting the left subarray](left_subarray_sort.png)
-
-- **Sorting the right subarray recursively**:
-  ![Sorting the right subarray](right_subarray_sort.png)
-
-## Applications of Quicksort
-
-Quicksort finds application in various scenarios, especially when efficiency is crucial. Some common applications include:
-
-- Sorting large datasets efficiently.
-- Implementing data structures like priority queues and associative arrays.
-- Partitioning in various algorithms like quick select.
-
-Quicksort's average time complexity of \( O(n \log n) \) makes it a preferred choice for many sorting tasks. Its ability to efficiently handle large datasets and stability in performance across different scenarios contribute to its popularity.
