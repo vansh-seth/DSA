@@ -211,3 +211,58 @@ end insertionSort
 ```
 
 This pseudocode outlines the steps involved in insertion sort. It iterates through the array, placing each unsorted element in its correct position among the sorted elements.
+
+# Insertion Sort Complexity
+
+Insertion sort is a straightforward sorting algorithm with a time complexity that varies based on the state of the input array.
+
+## Time Complexity
+
+- **Best Case:** \( O(n) \)
+- **Worst Case:** \( O(n^2) \)
+- **Average Case:** \( O(n^2) \)
+
+### Worst Case Complexity: \( O(n^2) \)
+
+In the worst-case scenario, such as when sorting an array in descending order, each element must be compared with every other element, resulting in approximately \( n^2 \) comparisons.
+
+### Best Case Complexity: \( O(n) \)
+
+The best-case scenario occurs when the array is already sorted. In this case, the outer loop runs \( n \) times, but the inner loop doesn't execute, leading to a linear time complexity.
+
+### Average Case Complexity: \( O(n^2) \)
+
+The average case complexity arises when the array elements are in a random or jumbled order, neither strictly ascending nor descending.
+
+## Space Complexity
+
+The space complexity of insertion sort is \( O(1) \) because it operates in-place, using only a constant amount of additional space regardless of the size of the input array.
+
+## Stability
+
+Insertion sort is stable, meaning it preserves the relative order of equal elements during the sorting process.
+
+## Insertion Sort Applications
+
+Insertion sort is suitable for situations where:
+
+- The array size is small.
+- The majority of the array is already sorted or nearly sorted.
+
+## Code Sample
+
+```plaintext
+Insertion Sort Algorithm:
+
+insertionSort(array)
+  // Assume the first element is sorted
+  for each unsorted element X
+    // Extract the element X
+    for j from lastSortedIndex down to 0
+      if current element j > X
+        move sorted element to the right by 1
+    // Break loop and insert X at the correct position
+end insertionSort
+```
+
+This algorithm iterates through the array, placing each unsorted element in its correct position among the sorted elements. It is efficient for small datasets or nearly sorted arrays.
