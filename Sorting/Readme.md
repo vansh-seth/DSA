@@ -462,3 +462,42 @@ Counting sort is well-suited for scenarios where:
 
 Counting sort's simplicity and efficiency make it a valuable addition to sorting algorithms, especially in situations where its assumptions about input data are met.
 
+# Counting Sort Complexity
+
+Counting Sort is an efficient sorting algorithm suitable for scenarios where the range of input elements is not significantly larger than the number of elements. It counts the occurrences of each unique element in the array and uses this information to sort the elements.
+
+## Time Complexity
+
+- **Best Case:** \( O(n + k) \)
+- **Worst Case:** \( O(n + k) \)
+- **Average Case:** \( O(n + k) \)
+
+### Explanation:
+
+- **Worst Case Complexity:** \( O(n + k) \)
+  - The worst-case scenario arises when the array contains a large number of unique elements. However, regardless of the input distribution, the algorithm's complexity remains the same due to the fixed number of loops.
+
+- **Best Case Complexity:** \( O(n + k) \)
+  - The best-case scenario occurs when the array contains a small number of unique elements, leading to faster execution.
+
+- **Average Case Complexity:** \( O(n + k) \)
+  - The average-case time complexity is the same as the best and worst cases, making Counting Sort highly consistent in performance.
+
+## Space Complexity
+
+The space complexity of Counting Sort is \( O(k) \), where \( k \) represents the range of elements in the input array. As the range of elements increases, so does the space complexity.
+
+## Key Points
+
+- **Stability:** Counting Sort is a stable sorting algorithm, preserving the relative order of equal elements.
+- **No Comparisons:** Unlike comparison-based sorting techniques, Counting Sort does not involve comparisons between elements, making it efficient in certain scenarios.
+- **Linear Complexity:** Counting Sort offers linear time complexity, making it suitable for scenarios where efficiency is crucial.
+
+## Applications
+
+Counting Sort finds applications in situations where:
+
+- The input array contains smaller integers with multiple occurrences.
+- Linear time complexity is desired, especially in scenarios with a limited range of input elements.
+
+Counting Sort's simplicity and efficiency make it a valuable choice for sorting integers, especially in scenarios where the input range is not significantly larger than the number of elements.
