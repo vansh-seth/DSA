@@ -687,3 +687,50 @@ Heap Sort is not stable, meaning that the relative order of elements with equal 
 
 ## Applications
 Heap Sort finds applications in systems where security and embedded systems, such as the Linux Kernel, require a sorting algorithm with \(O(n \log n)\) time complexity and constant auxiliary storage (\(O(1)\)). While not as widely used as Quick Sort or Merge Sort in general-purpose scenarios, Heap Sort's underlying data structure, the heap, is efficient for tasks like priority queues.
+
+# Shell Sort Algorithm
+
+Shell sort is an extension of the insertion sort algorithm that aims to improve its efficiency by initially sorting elements that are far apart from each other and progressively reducing the interval between elements to be sorted.
+
+## Working Principle
+
+- **Interval Selection**: Shell sort uses predefined sequences, such as Shell's original sequence or other sequences like Knuth's, Sedgewick's, Hibbard's, etc., to determine the intervals between elements.
+- **Sorting Process**: The algorithm iterates over the array, comparing and swapping elements that are separated by the selected interval. It starts with a large interval and gradually reduces it until it reaches 1.
+- **Gap Sorting**: At each iteration, elements separated by the current interval are sorted using an insertion sort-like process.
+- **Final Sort**: As the interval decreases to 1, the algorithm performs a final pass, effectively sorting the entire array.
+
+## Working Example
+
+Suppose we have an array `arr` of size `size`.
+
+- Initially, the algorithm selects an interval, say `interval = size/2`.
+- It then compares and sorts elements `arr[i]` and `arr[i + interval]` for all `i` from 0 to `size - interval`.
+- The process continues, reducing the interval until it reaches 1.
+- Finally, the array is sorted.
+
+## Shell Sort Algorithm
+
+```python
+def shellSort(arr, size):
+    # Start with a large interval and reduce it
+    for interval in range(size // 2, 0, -1):
+        # Sort elements at the current interval
+        for i in range(interval, size):
+            temp = arr[i]
+            j = i
+            while j >= interval and arr[j - interval] > temp:
+                arr[j] = arr[j - interval]
+                j -= interval
+            arr[j] = temp
+```
+
+## Complexity Analysis
+
+- **Time Complexity**:
+  - The time complexity of Shell sort varies depending on the chosen sequence but typically ranges from \(O(n \log^2 n)\) to \(O(n^{1.5})\).
+- **Space Complexity**: Shell sort has a space complexity of \(O(1)\) since it operates in-place.
+- **Stability**: Shell sort is not stable, meaning the relative order of equal elements may change after sorting.
+
+## Applications
+
+Shell sort is suitable for scenarios where moderate sorting efficiency is required, and the input data may be partially sorted. It's commonly used in embedded systems and applications where memory usage is constrained.
