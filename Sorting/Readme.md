@@ -663,3 +663,27 @@ void heapSort(int arr[], int n) {
 }
 ```
 
+# Heap Sort Complexity
+
+## Time Complexity
+- **Best Case**: \(O(n \log n)\)
+- **Worst Case**: \(O(n \log n)\)
+- **Average Case**: \(O(n \log n)\)
+
+Heap Sort exhibits \(O(n \log n)\) time complexity for all scenarios, including the best, average, and worst cases.
+
+The rationale behind this complexity lies in the nature of the complete binary tree formed during the sorting process. With a tree height of \(\log n\), the algorithm compares and swaps elements from the root to leaf nodes, potentially requiring \(O(\log n)\) operations per element.
+
+During the build_max_heap stage, performed on \(n/2\) elements, the worst-case complexity is approximately \(n/2 \times \log n\), which simplifies to \(O(n \log n)\).
+
+Similarly, during the sorting stage, where the root element is exchanged with the last element and heapified, each element may require \(O(\log n)\) operations, resulting in a total complexity of \(O(n \log n)\) for the entire sorting process.
+
+Additionally, the algorithm operates in-place with a space complexity of \(O(1)\).
+
+## Stability
+- **Stability**: No
+
+Heap Sort is not stable, meaning that the relative order of elements with equal keys may change after sorting.
+
+## Applications
+Heap Sort finds applications in systems where security and embedded systems, such as the Linux Kernel, require a sorting algorithm with \(O(n \log n)\) time complexity and constant auxiliary storage (\(O(1)\)). While not as widely used as Quick Sort or Merge Sort in general-purpose scenarios, Heap Sort's underlying data structure, the heap, is efficient for tasks like priority queues.
