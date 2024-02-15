@@ -501,3 +501,65 @@ Counting Sort finds applications in situations where:
 - Linear time complexity is desired, especially in scenarios with a limited range of input elements.
 
 Counting Sort's simplicity and efficiency make it a valuable choice for sorting integers, especially in scenarios where the input range is not significantly larger than the number of elements.
+
+# Radix Sort Algorithm
+
+Radix sort is a non-comparison based sorting algorithm that sorts elements by first grouping digits of the same place value and then sorting the elements based on these digits.
+
+## Working of Radix Sort
+
+1. **Find the Largest Element**: Determine the largest element in the array, and calculate the number of digits in it. This helps in determining the number of passes required to sort the array.
+
+2. **Iterate through Significant Places**: Go through each significant place (from least significant to most significant) of the elements, starting from the unit place.
+
+3. **Use Stable Sorting Technique**: Utilize any stable sorting technique (such as counting sort) to sort the elements based on the digits at each significant place.
+
+4. **Sorting Steps**: 
+
+    - Sort the elements based on the unit place digits.
+    - Sort the elements based on the tens place digits.
+    - Continue this process until the most significant place is sorted.
+
+## Radix Sort Algorithm
+
+```plaintext
+radixSort(array)
+  d <- maximum number of digits in the largest element
+  create d buckets of size 0-9
+  
+  for i <- 0 to d
+    sort the elements according to the ith place digits using countingSort
+
+countingSort(array, d)
+  max <- find largest element among dth place elements
+  initialize count array with all zeros
+  
+  // Count occurrences of each unique digit
+  for j <- 0 to size
+    find the total count of each unique digit in the dth place of elements and
+    store the count at jth index in count array
+    
+  // Calculate cumulative sum
+  for i <- 1 to max
+    find the cumulative sum and store it in the count array itself
+    
+  // Place elements into the array
+  for j <- size down to 1
+    restore the elements to array
+    decrease count of each element restored by 1
+```
+
+## Key Points
+
+- **Stability**: Radix sort is a stable sorting algorithm, preserving the relative order of equal elements.
+- **Non-Comparison Based**: Radix sort does not involve comparisons between elements, making it efficient for certain scenarios.
+- **Complexity**: The time complexity of radix sort is \(O(d \times (n + k))\), where \(d\) is the number of digits in the largest element, \(n\) is the number of elements, and \(k\) is the range of elements.
+
+## Applications
+
+Radix sort finds applications in scenarios where:
+
+- The elements being sorted are integers or strings with fixed-length representations.
+- The range of elements is not significantly larger than the number of elements.
+- Linear time complexity is desirable.
+
