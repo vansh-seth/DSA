@@ -404,3 +404,61 @@ Quicksort finds application in situations where:
 - Space complexity is also a significant consideration.
 
 Quicksort's adaptability to various scenarios and its average-case time complexity of \( O(n \log n) \) make it a preferred choice in many sorting tasks.
+
+
+# Counting Sort Algorithm
+
+Counting sort is a non-comparison based sorting algorithm that operates by counting the occurrences of each unique element in the input array. It then uses this count information to place each element into its correct position in the sorted array.
+
+## Working of Counting Sort
+
+1. **Find the Maximum Element**: Determine the maximum element (max) from the given array.
+
+2. **Initialize Count Array**: Create an auxiliary array of length `max + 1` initialized with all elements set to 0. This array will store the count of each element in the input array.
+
+3. **Count Occurrences**: Iterate through the input array and count the occurrences of each unique element, storing the count at its respective index in the count array.
+
+4. **Calculate Cumulative Sum**: Compute the cumulative sum of elements in the count array. This cumulative sum helps in determining the correct index for each element in the sorted array.
+
+5. **Place Elements**: Using the cumulative count, find the index of each element in the original array and place it into its correct position in the sorted array.
+
+6. **Decrement Counts**: After placing each element at its correct position, decrement its count by one in the count array.
+
+## Counting Sort Algorithm
+
+```plaintext
+countingSort(array, size)
+  max <- find largest element in array
+  initialize count array with all zeros
+  
+  // Count occurrences of each unique element
+  for j <- 0 to size
+    find the total count of each unique element and 
+    store the count at jth index in count array
+    
+  // Calculate cumulative sum
+  for i <- 1 to max
+    find the cumulative sum and store it in count array itself
+    
+  // Place elements into sorted array
+  for j <- size down to 1
+    restore the elements to array
+    decrease count of each element restored by 1
+```
+
+## Key Points
+
+- **Time Complexity**: Counting sort typically runs in \(O(n + k)\) time, where \(n\) is the number of elements in the input array and \(k\) is the range of the input.
+- **Space Complexity**: The space complexity of counting sort is \(O(k)\), where \(k\) represents the range of the input.
+- **Stability**: Counting sort is stable, meaning it preserves the relative order of equal elements during the sorting process.
+
+## Applications
+
+Counting sort is well-suited for scenarios where:
+
+- The range of input elements is not significantly larger than the number of elements.
+- Efficiency is required in sorting integers or small keys.
+- External sorting, such as in sorting file records with integer keys.
+
+Counting sort's simplicity and efficiency make it a valuable addition to sorting algorithms, especially in situations where its assumptions about input data are met.
+
