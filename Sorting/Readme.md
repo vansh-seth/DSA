@@ -599,3 +599,67 @@ Radix sort finds applications in specific scenarios, including:
 
 - Implementation in algorithms like DC3 (Kärkkäinen-Sanders-Burkhardt) for constructing suffix arrays.
 - Situations where numbers have large ranges, making radix sort a viable option for efficient sorting.
+
+# Heap Sort Algorithm
+
+Heap Sort is a highly efficient sorting algorithm that leverages the concept of binary heaps to sort elements in an array. It involves two main operations: building a heap and repeatedly removing the largest (or smallest) element from the heap.
+
+## Understanding the Concept
+
+Heap Sort operates on the principle of binary heaps, which are a special type of binary tree where the parent node is either greater than or equal to (max heap) or less than or equal to (min heap) its child nodes.
+
+### Building a Heap
+
+The process of building a heap involves transforming an array into a heap data structure. This is achieved by rearranging the array elements so that they satisfy the heap property.
+
+### Removing the Largest Element
+
+Once the heap is constructed, the largest (or smallest) element is extracted from the root of the heap and placed at the end of the array. The heap is then restructured to maintain the heap property, and the process is repeated until the array is sorted.
+
+## Key Operations
+
+1. **Heapify**: This operation ensures that the subtree rooted at a given node satisfies the heap property. It recursively adjusts the elements to maintain the heap structure.
+
+2. **Swap**: This operation swaps two elements in the array, typically used during heapify and while moving elements during the sorting process.
+
+## Heap Sort Procedure
+
+1. **Build Heap**: Rearrange the array elements to create a valid heap structure.
+   
+2. **Heap Sort**: Continuously remove the root element of the heap (which is the largest element in a max heap or the smallest in a min heap) and place it at the end of the array. After each removal, heapify the remaining elements to maintain the heap property.
+
+## Code Implementation
+
+```c
+// Heapify function
+void heapify(int arr[], int n, int i) {
+  int largest = i;
+  int left = 2 * i + 1;
+  int right = 2 * i + 2;
+
+  if (left < n && arr[left] > arr[largest])
+    largest = left;
+
+  if (right < n && arr[right] > arr[largest])
+    largest = right;
+
+  if (largest != i) {
+    swap(&arr[i], &arr[largest]);
+    heapify(arr, n, largest);
+  }
+}
+
+// Heap Sort function
+void heapSort(int arr[], int n) {
+  // Build heap (rearrange array)
+  for (int i = n / 2 - 1; i >= 0; i--)
+    heapify(arr, n, i);
+
+  // Heap sort
+  for (int i = n - 1; i >= 0; i--) {
+    swap(&arr[0], &arr[i]);
+    heapify(arr, i, 0);
+  }
+}
+```
+
