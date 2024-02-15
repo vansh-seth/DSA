@@ -563,3 +563,39 @@ Radix sort finds applications in scenarios where:
 - The range of elements is not significantly larger than the number of elements.
 - Linear time complexity is desirable.
 
+# Radix Sort Complexity
+
+Radix sort is a non-comparative sorting algorithm that sorts elements by grouping digits of the same significance and then sorting based on these digits. It offers advantages over comparative sorting algorithms due to its linear time complexity.
+
+## Time Complexity
+
+- **Best Case:** \( O(n + k) \)
+- **Worst Case:** \( O(n + k) \)
+- **Average Case:** \( O(n + k) \)
+
+### Explanation:
+
+- **Linear Time Complexity:** Radix sort achieves linear time complexity due to its ability to distribute elements into buckets based on their digits and then sort each bucket independently.
+
+- **Intermediate Sorting:** The time complexity of Radix sort primarily depends on the intermediate stable sort it uses, such as counting sort. Hence, the overall time complexity is \( O(d \times (n + k)) \), where \( d \) is the number of digits in the largest element, and \( n \) and \( k \) represent the number of elements and the range of elements, respectively.
+
+## Space Complexity
+
+Radix sort exhibits a space complexity of \( O(n + k) \), where \( k \) represents the maximum range of elements.
+
+## Advantages and Limitations
+
+- **Advantages:**
+  - Linear time complexity makes it efficient for large datasets and situations where performance matters.
+  - Suitable for scenarios with numbers in large ranges.
+
+- **Limitations:**
+  - Space Inefficiency: Radix sort may consume significant space, especially when dealing with large digit numbers or elements with large ranges.
+  - Not Widely Used: Due to its space inefficiency, radix sort is not commonly used in software libraries.
+
+## Applications
+
+Radix sort finds applications in specific scenarios, including:
+
+- Implementation in algorithms like DC3 (Kärkkäinen-Sanders-Burkhardt) for constructing suffix arrays.
+- Situations where numbers have large ranges, making radix sort a viable option for efficient sorting.
