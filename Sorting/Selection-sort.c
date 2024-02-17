@@ -33,3 +33,12 @@ int main() {
   printf("Sorted array in Acsending Order:\n");
   printArray(data, size);
 }
+
+/*
+Output:
+
+Time taken: 0.000002 seconds
+Sorted array in Ascending Order:
+2  10  12  15  20  
+
+*/
