@@ -191,3 +191,36 @@ Binary trees find applications across various domains due to their efficient dat
    - In compilers and parsing algorithms, binary trees are employed to construct syntax trees that represent the syntactic structure of source code. Syntax trees help validate the syntax of programming languages and facilitate subsequent compilation and interpretation processes.
 
 Binary trees' versatility and efficiency make them indispensable in a wide range of applications, contributing to faster data processing, optimized algorithm performance, and improved system reliability.
+
+A Full Binary Tree, also known as a proper binary tree, is a special type of binary tree where every internal node has either two children or no children at all. This unique property leads to several interesting theorems and relationships within the structure of a full binary tree:
+
+Let's denote:
+- \( i \) as the number of internal nodes
+- \( n \) as the total number of nodes
+- \( l \) as the number of leaves
+- \( \lambda \) as the number of levels
+
+Here are some key theorems related to full binary trees:
+
+1. **Number of Leaves and Internal Nodes**:
+   - The number of leaves (\( l \)) in a full binary tree is always one more than the number of internal nodes (\( i \)).
+
+2. **Total Number of Nodes**:
+   - The total number of nodes (\( n \)) in a full binary tree is given by \( 2i + 1 \).
+
+3. **Number of Internal Nodes**:
+   - The number of internal nodes (\( i \)) in a full binary tree is \( \frac{n - 1}{2} \).
+
+4. **Number of Leaves (Alternative)**:
+   - The number of leaves (\( l \)) in a full binary tree is \( \frac{n + 1}{2} \).
+
+5. **Total Number of Nodes (Alternative)**:
+   - The total number of nodes (\( n \)) in a full binary tree with \( l \) leaves is \( 2l - 1 \).
+
+6. **Number of Internal Nodes (Alternative)**:
+   - The number of internal nodes (\( i \)) in a full binary tree with \( l \) leaves is \( l - 1 \).
+
+7. **Maximum Number of Leaves**:
+   - The number of leaves in a full binary tree with \( \lambda \) levels is at most \( 2^\lambda - 1 \).
+
+These theorems provide valuable insights into the structure and properties of full binary trees, aiding in their analysis and utilization in various algorithms and applications.
