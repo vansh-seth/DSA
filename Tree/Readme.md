@@ -1,46 +1,41 @@
-# Graph Data Structure Overview
+# Tree Data Structure Overview
 
 ## Introduction
 
-In the realm of computer science, a graph data structure serves as a foundational tool for modeling relationships between entities. Imagine social media platforms like Facebook, where every entity, be it a user, photo, event, group, or page, can be viewed as a node. Each interaction or relationship between these entities becomes an edge in the graph.
+A tree data structure is a hierarchical arrangement of nodes connected by edges. Unlike linear data structures such as arrays or linked lists, trees offer efficient access to data due to their non-linear nature.
 
-## Example: Facebook Graph
+## Tree Terminology
 
-Consider Facebook as an example. Users, groups, pages, events, and more are all represented as nodes within the graph. Actions such as making friends, joining groups, or liking pages create connections or edges between these nodes.
+- **Node**: An entity containing a value and pointers to child nodes. Leaf nodes have no children, while internal nodes have at least one child.
+- **Edge**: Link connecting two nodes.
+- **Root**: Topmost node of the tree.
+- **Height of a Node**: Number of edges from the node to the deepest leaf.
+- **Depth of a Node**: Number of edges from the root to the node.
+- **Height of a Tree**: Height of the root node or depth of the deepest node.
+- **Degree of a Node**: Total number of branches from that node.
+- **Forest**: Collection of disjoint trees.
 
-## Components of a Graph
+## Types of Trees
 
-A graph, denoted as \( G = (V, E) \), consists of:
+1. **Binary Tree**: Each node has at most two children.
+2. **Binary Search Tree (BST)**: Binary tree with the property that for each node, all nodes in the left subtree have values less than the node's value, and all nodes in the right subtree have values greater than the node's value.
+3. **AVL Tree**: Self-balancing binary search tree where the heights of the two child subtrees of any node differ by at most one.
+4. **B-Tree**: Self-balancing tree structure, commonly used in databases and file systems, capable of storing large amounts of data.
+  
+## Tree Traversal
 
-- **Vertices (V)**: These are the nodes representing entities like users or pages.
-- **Edges (E)**: These are the connections between nodes, often represented as ordered pairs of vertices, indicating relationships.
+Traversal algorithms help in visiting nodes in a tree:
 
-## Graph Terminology
+- **Inorder**: Left, Root, Right
+- **Preorder**: Root, Left, Right
+- **Postorder**: Left, Right, Root
 
-- **Adjacency**: Two vertices are adjacent if there exists an edge between them.
-- **Path**: A sequence of edges enabling traversal from one vertex to another.
-- **Directed Graph**: In this type of graph, edges have directionality, meaning \( (u, v) \) does not necessarily imply \( (v, u) \).
+## Tree Applications
 
-## Graph Representation
+- **Binary Search Trees (BSTs)**: Used for efficient searching and insertion operations.
+- **Heap**: Tree structure used in heap sort algorithms.
+- **Tries**: Modified tree structure used in routers for storing routing information.
+- **B-Trees and T-Trees**: Variants of trees used in popular databases for efficient data storage.
+- **Syntax Trees**: Used by compilers to validate the syntax of programs.
 
-Graphs can be represented in two primary ways:
-
-### 1. Adjacency Matrix
-
-- A 2D array where rows and columns represent vertices.
-- If \( a[i][j] = 1 \), it signifies an edge between vertex \( i \) and vertex \( j \).
-- For undirected graphs, the matrix is symmetric about the diagonal.
-
-### 2. Adjacency List
-
-- An array of linked lists where each index represents a vertex.
-- Each element in the linked list corresponds to vertices connected to the indexed vertex.
-
-## Graph Operations
-
-Common graph operations include:
-
-- Checking element presence in the graph.
-- Traversing the graph to visit all vertices or find specific paths.
-- Adding elements (vertices or edges) to the graph.
-- Finding paths between vertices.
+Trees find applications across various domains, offering efficient data organization and retrieval mechanisms. Understanding tree data structures is essential for efficient algorithm design and implementation.
