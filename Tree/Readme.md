@@ -133,7 +133,8 @@ A binary tree is a fundamental tree data structure where each parent node can ha
 
 A full binary tree is characterized by each internal node having exactly two children or no children at all.
 
-![Full Binary Tree](full_binary_tree.png)
+![image](https://github.com/vansh-seth/DSA/assets/111755254/d2994e80-915d-40ff-ace6-7f02432267ec)
+
 
 ### 2. Perfect Binary Tree
 
