@@ -117,3 +117,62 @@ void postorder(struct node* root) {
 - **Inorder**: Left subtree -> Root -> Right subtree
 - **Preorder**: Root -> Left subtree -> Right subtree
 - **Postorder**: Left subtree -> Right subtree -> Root
+
+# Binary Tree Overview
+
+A binary tree is a fundamental tree data structure where each parent node can have at most two children. Each node in a binary tree contains:
+
+- Data item
+- Address of the left child
+- Address of the right child
+
+## Types of Binary Trees
+
+### 1. Full Binary Tree
+
+A full binary tree is characterized by each internal node having exactly two children or no children at all.
+
+![Full Binary Tree](full_binary_tree.png)
+
+### 2. Perfect Binary Tree
+
+In a perfect binary tree, every internal node has exactly two child nodes, and all leaf nodes are at the same level.
+
+![Perfect Binary Tree](perfect_binary_tree.png)
+
+### 3. Complete Binary Tree
+
+A complete binary tree requires every level to be completely filled, with all leaf elements leaning towards the left. The last leaf element may not have a right sibling.
+
+![Complete Binary Tree](complete_binary_tree.png)
+
+### 4. Degenerate or Pathological Tree
+
+A degenerate or pathological tree has a single child either to the left or right.
+
+![Degenerate Binary Tree](degenerate_binary_tree.png)
+
+### 5. Skewed Binary Tree
+
+A skewed binary tree is pathological, dominated by either left or right nodes, leading to left-skewed or right-skewed binary trees.
+
+![Skewed Binary Tree](skewed_binary_tree.png)
+
+### 6. Balanced Binary Tree
+
+A balanced binary tree maintains a height difference of 0 or 1 between the left and right subtrees for each node.
+
+![Balanced Binary Tree](balanced_binary_tree.png)
+
+## Binary Tree Representation
+
+In programming languages like C, a node of a binary tree is commonly represented using a structure containing data and pointers to left and right child nodes.
+
+```c
+struct node {
+    int data;
+    struct node *left;
+    struct node *right;
+};
+```
+
