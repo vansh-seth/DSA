@@ -39,3 +39,81 @@ Traversal algorithms help in visiting nodes in a tree:
 - **Syntax Trees**: Used by compilers to validate the syntax of programs.
 
 Trees find applications across various domains, offering efficient data organization and retrieval mechanisms. Understanding tree data structures is essential for efficient algorithm design and implementation.
+
+## Tree Traversal - Inorder, Preorder, and Postorder
+
+Traversing a tree involves visiting each node systematically. While linear data structures have a single way to access data, hierarchical structures like trees offer various traversal methods. Let's delve into the essential tree traversal techniques: inorder, preorder, and postorder.
+
+### Sample Tree:
+
+![Sample Tree](tree_traversal_example.png)
+
+### Tree Structure:
+
+```c
+struct node {
+    int data;
+    struct node* left;
+    struct node* right;
+};
+```
+
+### Inorder Traversal:
+
+In inorder traversal:
+
+1. Visit all nodes in the left subtree.
+2. Visit the root node.
+3. Visit all nodes in the right subtree.
+
+```c
+void inorder(struct node* root) {
+    if (root != NULL) {
+        inorder(root->left);
+        display(root->data);
+        inorder(root->right);
+    }
+}
+```
+
+### Preorder Traversal:
+
+In preorder traversal:
+
+1. Visit the root node.
+2. Visit all nodes in the left subtree.
+3. Visit all nodes in the right subtree.
+
+```c
+void preorder(struct node* root) {
+    if (root != NULL) {
+        display(root->data);
+        preorder(root->left);
+        preorder(root->right);
+    }
+}
+```
+
+### Postorder Traversal:
+
+In postorder traversal:
+
+1. Visit all nodes in the left subtree.
+2. Visit all nodes in the right subtree.
+3. Visit the root node.
+
+```c
+void postorder(struct node* root) {
+    if (root != NULL) {
+        postorder(root->left);
+        postorder(root->right);
+        display(root->data);
+    }
+}
+```
+
+### Visualization:
+
+- **Inorder**: Left subtree -> Root -> Right subtree
+- **Preorder**: Root -> Left subtree -> Right subtree
+- **Postorder**: Left subtree -> Right subtree -> Root
