@@ -46,7 +46,8 @@ Traversing a tree involves visiting each node systematically. While linear data 
 
 ### Sample Tree:
 
-![Sample Tree](tree_traversal_example.png)
+![image](https://github.com/vansh-seth/DSA/assets/111755254/d44b0e3b-b25b-4504-8e5c-c92b46f91060)
+
 
 ### Tree Structure:
 
