@@ -164,7 +164,7 @@ A skewed binary tree is pathological, dominated by either left or right nodes, l
 
 A balanced binary tree maintains a height difference of 0 or 1 between the left and right subtrees for each node.
 
-![Balanced Binary Tree](balanced_binary_tree.png)
+![image](https://github.com/vansh-seth/DSA/assets/111755254/53123c53-0903-4bcd-b2c7-ebf854c89c48)
 
 ## Binary Tree Representation
 
