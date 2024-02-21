@@ -249,3 +249,22 @@ A perfect binary tree is a specific type of binary tree characterized by its str
 A perfect binary tree can be represented recursively. This representation entails:
 - Nodes with no children define a perfect binary tree of height \( h = 0 \).
 - Nodes with a height \( h > 0 \) form a perfect binary tree if both their subtrees are of height \( h - 1 \) and are non-overlapping.
+
+
+### Perfect Binary Tree Theorems
+
+Perfect binary trees possess several important theorems regarding their structure and characteristics:
+
+1. **Node Count Theorem**: 
+   - A perfect binary tree of height \( h \) contains \( 2^{h+1} - 1 \) nodes.
+
+2. **Height Theorem**:
+   - A perfect binary tree with \( n \) nodes has a height of \( \log(n + 1) - 1 \), which is \( \Theta(\log n) \).
+
+3. **Leaf Node Theorem**:
+   - A perfect binary tree of height \( h \) comprises \( 2^h \) leaf nodes.
+
+4. **Average Node Depth Theorem**:
+   - The average depth of a node in a perfect binary tree is \( \Theta(\log n) \).
+
+These theorems are fundamental in understanding the structural properties and computational complexities associated with perfect binary trees.
