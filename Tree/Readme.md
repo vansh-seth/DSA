@@ -226,3 +226,26 @@ Here are some key theorems related to full binary trees:
    - The number of leaves in a full binary tree with \( \lambda \) levels is at most \( 2^\lambda - 1 \).
 
 These theorems provide valuable insights into the structure and properties of full binary trees, aiding in their analysis and utilization in various algorithms and applications.
+
+### Perfect Binary Trees
+
+A perfect binary tree is a specific type of binary tree characterized by its structural properties. In a perfect binary tree:
+
+- Every internal node has exactly two child nodes.
+- All leaf nodes are at the same level.
+
+#### Characteristics:
+
+1. **Node Degrees**: 
+   - All internal nodes have a degree of 2, meaning they have exactly two child nodes.
+   
+2. **Recursive Definition**:
+   - A perfect binary tree can be defined recursively as follows:
+     - If a single node has no children, it constitutes a perfect binary tree of height \( h = 0 \).
+     - For nodes with a height \( h > 0 \), they are perfect binary trees if both of their subtrees are of height \( h - 1 \) and are non-overlapping.
+
+#### Recursive Representation:
+
+A perfect binary tree can be represented recursively. This representation entails:
+- Nodes with no children define a perfect binary tree of height \( h = 0 \).
+- Nodes with a height \( h > 0 \) form a perfect binary tree if both their subtrees are of height \( h - 1 \) and are non-overlapping.
