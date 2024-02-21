@@ -158,7 +158,7 @@ A degenerate or pathological tree has a single child either to the left or right
 
 A skewed binary tree is pathological, dominated by either left or right nodes, leading to left-skewed or right-skewed binary trees.
 
-![Skewed Binary Tree](skewed_binary_tree.png)
+![image](https://github.com/vansh-seth/DSA/assets/111755254/8c9375f3-dc61-4425-8311-4b778a4370fc)
 
 ### 6. Balanced Binary Tree
 
