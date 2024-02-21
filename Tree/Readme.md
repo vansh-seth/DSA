@@ -268,3 +268,38 @@ Perfect binary trees possess several important theorems regarding their structur
    - The average depth of a node in a perfect binary tree is \( \Theta(\log n) \).
 
 These theorems are fundamental in understanding the structural properties and computational complexities associated with perfect binary trees.
+
+### Complete Binary Tree
+
+A complete binary tree is a type of binary tree characterized by the following properties:
+
+1. **Filled Levels**: 
+   - All levels of the tree are completely filled except possibly the last level.
+   
+2. **Left-Leaning Leaf Nodes**:
+   - All leaf elements lean towards the left side of the tree.
+   
+3. **Right Sibling Variability**:
+   - The last leaf element might not have a right sibling, distinguishing it from a full binary tree.
+
+#### Differences from Full Binary Tree:
+
+- While similar to a full binary tree, a complete binary tree differs in the placement of leaf elements and the presence of right siblings.
+  
+#### Creating a Complete Binary Tree:
+
+The creation process involves the following steps:
+
+1. **Root Node Selection**:
+   - Choose the first element of the list as the root node.
+   
+2. **Child Node Placement**:
+   - Place the second element as the left child of the root node and the third element as the right child.
+   
+3. **Level-wise Expansion**:
+   - Continue adding elements level-wise, ensuring that each level is filled from left to right.
+   
+4. **Repeat Process**:
+   - Repeat the placement process until reaching the last element.
+
+This method ensures the formation of a complete binary tree while maintaining the specified characteristics.
