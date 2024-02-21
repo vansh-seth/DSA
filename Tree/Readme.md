@@ -140,7 +140,7 @@ A full binary tree is characterized by each internal node having exactly two chi
 
 In a perfect binary tree, every internal node has exactly two child nodes, and all leaf nodes are at the same level.
 
-![Perfect Binary Tree](perfect_binary_tree.png)
+![image](https://github.com/vansh-seth/DSA/assets/111755254/628df1ad-2344-4ba3-87d7-943bb9188af1)
 
 ### 3. Complete Binary Tree
 
