@@ -146,7 +146,7 @@ In a perfect binary tree, every internal node has exactly two child nodes, and a
 
 A complete binary tree requires every level to be completely filled, with all leaf elements leaning towards the left. The last leaf element may not have a right sibling.
 
-![Complete Binary Tree](complete_binary_tree.png)
+![image](https://github.com/vansh-seth/DSA/assets/111755254/31b9d097-31de-4fb7-aae1-edee1072fb51)
 
 ### 4. Degenerate or Pathological Tree
 
