@@ -303,3 +303,52 @@ The creation process involves the following steps:
    - Repeat the placement process until reaching the last element.
 
 This method ensures the formation of a complete binary tree while maintaining the specified characteristics.
+
+### Relationship between Array Indexes and Tree Elements in a Complete Binary Tree
+
+In a complete binary tree, there exists a direct relationship between the array indexes and the elements of the tree. This relationship facilitates easy traversal and manipulation of the tree elements stored in an array representation.
+
+#### Rules:
+
+1. **Finding Children**:
+   - The left child of an element at index \( i \) is located at index \( 2i + 1 \).
+   - The right child of an element at index \( i \) is located at index \( 2i + 2 \).
+
+2. **Finding Parent**:
+   - The parent of an element at index \( i \) is located at index \( \left\lfloor \frac{{i - 1}}{2} \right\rfloor \).
+
+#### Examples:
+
+- Left child of element at index 0:
+  - \( 2*0 + 1 = 1 \)
+  - Element at index 1: 12
+
+- Right child of element at index 0:
+  - \( 2*0 + 2 = 2 \)
+  - Element at index 2: 9
+
+- Left child of element at index 1:
+  - \( 2*1 + 1 = 3 \)
+  - Element at index 3: 5
+
+- Right child of element at index 1:
+  - \( 2*1 + 2 = 4 \)
+  - Element at index 4: 6
+
+#### Parent Finding:
+
+- Parent of element at index 2:
+  - \( \left\lfloor \frac{{2 - 1}}{2} \right\rfloor = 1 \)
+  - Element at index 1: 12
+
+- Parent of element at index 1:
+  - \( \left\lfloor \frac{{1 - 1}}{2} \right\rfloor = 0 \)
+  - Element at index 0: 1
+
+#### Importance:
+
+Understanding this mapping is crucial for various applications, notably:
+- **Heap-based Data Structures**: Heap data structures rely on complete binary trees for efficient implementation.
+- **Heap Sort**: Heap sort utilizes heap data structures for sorting elements.
+
+This relationship simplifies tree manipulation and forms the basis for implementing algorithms efficiently.
