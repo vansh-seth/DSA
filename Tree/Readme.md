@@ -152,7 +152,7 @@ A complete binary tree requires every level to be completely filled, with all le
 
 A degenerate or pathological tree has a single child either to the left or right.
 
-![Degenerate Binary Tree](degenerate_binary_tree.png)
+![image](https://github.com/vansh-seth/DSA/assets/111755254/dd594684-e98c-4369-8c64-4d2be63304dc)
 
 ### 5. Skewed Binary Tree
 
