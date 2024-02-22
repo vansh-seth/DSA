@@ -512,6 +512,9 @@ When deleting a node from a Binary Search Tree (BST), there are three primary ca
 - **Action**: Replace the node with its child node.
 - **Example**: Deleting node 6, which has a single child 4.
 - **Result**: Node 6 is replaced with its child 4, and 4 is removed from its original position.
+  
+![image](https://github.com/vansh-seth/DSA/assets/111755254/dee96d9e-dd3f-4a40-adfc-20debc984e88)
+
 
 #### Case III: Deleting a Node with Two Children
 
