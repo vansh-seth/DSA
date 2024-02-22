@@ -524,6 +524,9 @@ When deleting a node from a Binary Search Tree (BST), there are three primary ca
 - **Example**: Deleting node 3, which has two children.
 - **Result**: Node 3 is replaced with its inorder successor 4, and 4 is removed from its original position.
 
+![image](https://github.com/vansh-seth/DSA/assets/111755254/1443d549-2f95-48ae-8306-933366ba1a22)
+
+
 #### Importance of Cases:
 
 - **Maintaining BST Properties**: Each case ensures that the binary search tree properties are preserved after deletion.
