@@ -374,10 +374,10 @@ A balanced binary tree, also known as a height-balanced binary tree, is characte
 
 #### Visual Representation:
 
-- **Balanced Binary Tree Example:**
 
-![image](https://github.com/vansh-seth/DSA/assets/111755254/5a245479-e23a-4d32-a3a3-016393ae224f)
 
+- **Unbalanced Binary Tree Example:**
+![image](https://github.com/vansh-seth/DSA/assets/111755254/8ad7c864-d094-4e50-849a-5201257fbf95)
 
 #### Importance:
 
