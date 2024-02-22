@@ -431,3 +431,34 @@ Two fundamental operations performed on a Binary Search Tree include:
    - Searching for the presence of a specific element in the tree efficiently in \( O(\log n) \) time.
 
 
+### Search Operation in Binary Search Tree (BST)
+
+The search operation in a Binary Search Tree (BST) relies on the property that each left subtree contains values below the root, while each right subtree contains values above the root. This property enables efficient searching by traversing through the tree based on the comparison of the target value with the values at each node.
+
+#### Algorithm:
+
+1. **Base Case**:
+   - If the root is NULL, return NULL, indicating that the value is not found.
+
+2. **Comparison**:
+   - If the target value is equal to the data at the current root, return the data.
+
+3. **Traversal**:
+   - If the target value is less than the data at the current root, recursively search in the left subtree.
+   - If the target value is greater than the data at the current root, recursively search in the right subtree.
+
+#### Visualization:
+
+- **Example**: Searching for value 4 in the BST
+  1. Starting from the root (8), we compare 4 with the root's data.
+  2. Since 4 is less than 8, we traverse to the left subtree of 8.
+  3. Continuing the process, we traverse through the left subtree of 8, then the right subtree of 3, and finally the left subtree of 6.
+  4. Upon finding the value 4, we return it.
+  5. If the value is not found, eventually, we reach a leaf node with NULL, indicating the value is not present.
+
+#### Propagation:
+- As the search operation progresses recursively, if the value is found in any subtree, it is propagated up through the recursive calls until it is returned as the final result.
+- If the value is not found, NULL is returned, ultimately indicating absence.
+
+Understanding this recursive process helps efficiently locate elements within a BST while navigating through its nodes based on the comparisons made at each step.
+
