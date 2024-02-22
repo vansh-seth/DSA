@@ -393,4 +393,41 @@ A balanced binary tree, also known as a height-balanced binary tree, is characte
 - AVL tree
 - Balanced Binary Search Tree
 
+### Binary Search Tree (BST)
+
+A Binary Search Tree (BST) is a fundamental data structure that facilitates efficient searching and sorting of elements. It possesses the following characteristics:
+
+1. **Binary Structure**:
+   - Each node in the tree can have at most two children, commonly referred to as the left child and the right child.
+
+2. **Search Efficiency**:
+   - It enables searching for elements in \( O(\log n) \) time complexity, where \( n \) represents the number of elements in the tree.
+
+#### Properties:
+
+A Binary Search Tree maintains the following properties:
+
+1. **Left Subtree Values**:
+   - All nodes in the left subtree of a node contain values that are less than the value of the node.
+
+2. **Right Subtree Values**:
+   - All nodes in the right subtree of a node contain values that are greater than the value of the node.
+
+3. **Recursive Structure**:
+   - Both the left and right subtrees of each node are themselves Binary Search Trees, adhering to the above two properties.
+
+#### Validity Example:
+
+- In the example provided, the binary tree on the right is not a valid Binary Search Tree because the right subtree of the node "3" contains a value smaller than it, violating the properties of a Binary Search Tree.
+
+#### Basic Operations:
+
+Two fundamental operations performed on a Binary Search Tree include:
+
+1. **Insertion**:
+   - Adding a new element to the tree while maintaining its binary search tree properties.
+
+2. **Search**:
+   - Searching for the presence of a specific element in the tree efficiently in \( O(\log n) \) time.
+
 
