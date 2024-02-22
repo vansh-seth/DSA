@@ -462,3 +462,35 @@ The search operation in a Binary Search Tree (BST) relies on the property that e
 
 Understanding this recursive process helps efficiently locate elements within a BST while navigating through its nodes based on the comparisons made at each step.
 
+### Insert Operation in Binary Search Tree (BST)
+
+The insertion operation in a Binary Search Tree (BST) involves adding a new node to the tree while maintaining the BST property that all elements in the left subtree are lesser than the root, and all elements in the right subtree are greater than the root.
+
+#### Algorithm:
+
+1. **Base Case**:
+   - If the node is NULL, indicating an empty subtree, create a new node with the given data and return it.
+
+2. **Comparison**:
+   - If the data to be inserted is less than the current node's data, recursively insert it into the left subtree.
+   - If the data to be inserted is greater than the current node's data, recursively insert it into the right subtree.
+
+3. **Return Node**:
+   - Return the current node after insertion, ensuring that the tree structure remains intact.
+
+#### Visualization:
+
+- **Example**: Inserting value 4 into the existing BST
+  1. Starting from the root (8), compare 4 with the root's data.
+  2. Since 4 is less than 8, traverse to the left subtree of 8.
+  3. Continuing the process, traverse through the left subtree of 8, then the right subtree of 4, and finally the left subtree of 6.
+  4. Upon reaching the appropriate position, insert 4 as the left child of 6.
+  5. After insertion, return the modified subtree to maintain the overall structure of the BST.
+
+#### Importance of Returning Node:
+
+- The return statement at the end of the function ensures that the tree structure remains intact during the upward recursion step.
+- It ensures that as we move back up the tree, the other node connections aren't altered, preserving the integrity of the BST.
+
+Understanding the insertion process in a BST is crucial for dynamically updating the tree with new elements while adhering to the BST properties.
+
