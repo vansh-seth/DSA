@@ -504,6 +504,9 @@ When deleting a node from a Binary Search Tree (BST), there are three primary ca
 - **Example**: Deleting node 4, a leaf node.
 - **Result**: Node 4 is removed from the tree.
 
+![image](https://github.com/vansh-seth/DSA/assets/111755254/2c2f0662-076f-4a0c-82eb-fae6a5f2d944)
+
+
 #### Case II: Deleting a Node with a Single Child
 
 - **Action**: Replace the node with its child node.
@@ -523,10 +526,7 @@ When deleting a node from a Binary Search Tree (BST), there are three primary ca
 - **Maintaining BST Properties**: Each case ensures that the binary search tree properties are preserved after deletion.
 - **Efficient Removal**: The appropriate case is selected based on the structure of the node to be deleted, allowing for efficient removal while retaining the integrity of the tree.
 
-#### Visualization:
 
-- **Example**: Deletion of nodes 4, 6, and 3 as per the respective cases.
-  - ![Deletion Visualization](link-to-image)
 
 Understanding these cases and their corresponding actions is essential for managing the structure and integrity of a Binary Search Tree during deletion operations.
 
