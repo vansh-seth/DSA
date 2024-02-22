@@ -352,3 +352,40 @@ Understanding this mapping is crucial for various applications, notably:
 - **Heap Sort**: Heap sort utilizes heap data structures for sorting elements.
 
 This relationship simplifies tree manipulation and forms the basis for implementing algorithms efficiently.
+
+
+### Balanced Binary Tree
+
+A balanced binary tree, also known as a height-balanced binary tree, is characterized by the following conditions:
+
+1. **Height Difference**: 
+   - The height difference between the left and right subtrees of any node is not more than 1.
+
+2. **Balanced Subtrees**:
+   - Both the left and right subtrees of any node are themselves balanced binary trees.
+
+#### Conditions for a Height-Balanced Binary Tree:
+
+1. **Height Difference Constraint**:
+   - For any node, the absolute difference in height between its left and right subtrees is less than or equal to 1.
+
+2. **Recursive Balance**:
+   - Both the left and right subtrees must individually satisfy the conditions of being height-balanced binary trees.
+
+#### Visual Representation:
+
+- **Balanced Binary Tree Example:**
+
+![image](https://github.com/vansh-seth/DSA/assets/111755254/5a245479-e23a-4d32-a3a3-016393ae224f)
+
+
+#### Importance:
+
+- **Efficient Operations**:
+  - Maintaining balance ensures that the height of the tree remains logarithmic, leading to more efficient search and retrieval operations.
+
+- **Avoiding Degeneracy**:
+  - Unbalanced trees, on the other hand, can degrade into linked lists, resulting in poor performance.
+
+Balanced binary trees play a crucial role in optimizing various tree-based algorithms and data structures.
+
