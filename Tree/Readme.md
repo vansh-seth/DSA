@@ -494,3 +494,39 @@ The insertion operation in a Binary Search Tree (BST) involves adding a new node
 
 Understanding the insertion process in a BST is crucial for dynamically updating the tree with new elements while adhering to the BST properties.
 
+### Deletion Operation in Binary Search Tree (BST)
+
+When deleting a node from a Binary Search Tree (BST), there are three primary cases to consider, each requiring different procedures to maintain the binary search tree properties.
+
+#### Case I: Deleting a Leaf Node
+
+- **Action**: Simply remove the node from the tree.
+- **Example**: Deleting node 4, a leaf node.
+- **Result**: Node 4 is removed from the tree.
+
+#### Case II: Deleting a Node with a Single Child
+
+- **Action**: Replace the node with its child node.
+- **Example**: Deleting node 6, which has a single child 4.
+- **Result**: Node 6 is replaced with its child 4, and 4 is removed from its original position.
+
+#### Case III: Deleting a Node with Two Children
+
+- **Action**: Find the inorder successor of the node to be deleted.
+- **Inorder Successor**: The smallest node in the right subtree of the node to be deleted.
+- **Replace and Remove**: Replace the node with its inorder successor, and remove the inorder successor from its original position.
+- **Example**: Deleting node 3, which has two children.
+- **Result**: Node 3 is replaced with its inorder successor 4, and 4 is removed from its original position.
+
+#### Importance of Cases:
+
+- **Maintaining BST Properties**: Each case ensures that the binary search tree properties are preserved after deletion.
+- **Efficient Removal**: The appropriate case is selected based on the structure of the node to be deleted, allowing for efficient removal while retaining the integrity of the tree.
+
+#### Visualization:
+
+- **Example**: Deletion of nodes 4, 6, and 3 as per the respective cases.
+  - ![Deletion Visualization](link-to-image)
+
+Understanding these cases and their corresponding actions is essential for managing the structure and integrity of a Binary Search Tree during deletion operations.
+
