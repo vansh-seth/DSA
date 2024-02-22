@@ -389,5 +389,8 @@ A balanced binary tree, also known as a height-balanced binary tree, is characte
 - **Avoiding Degeneracy**:
   - Unbalanced trees, on the other hand, can degrade into linked lists, resulting in poor performance.
 
-Balanced binary trees play a crucial role in optimizing various tree-based algorithms and data structures.
+#### Balanced Binary Tree Applications
+- AVL tree
+- Balanced Binary Search Tree
+
 
