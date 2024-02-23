@@ -461,6 +461,9 @@ The search operation in a Binary Search Tree (BST) relies on the property that e
   4. Upon finding the value 4, we return it. ![image](https://github.com/vansh-seth/DSA/assets/111755254/5679f488-71fe-497f-b4aa-3b9f8fb52790)
 
 
+  5. If the value is not found, eventually, we reach a leaf node with NULL, indicating the value is not present.
+
+![image](https://github.com/vansh-seth/DSA/assets/111755254/198f489a-83cc-4a14-b391-c9fc30db386d)
 
 
 #### Propagation:
