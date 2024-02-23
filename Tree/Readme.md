@@ -491,12 +491,16 @@ The insertion operation in a Binary Search Tree (BST) involves adding a new node
 #### Visualization:
 
 - **Example**: Inserting value 4 into the existing BST
-  1. Starting from the root (8), compare 4 with the root's data. ![image](https://github.com/vansh-seth/DSA/assets/111755254/1d0df488-6505-41b7-8373-46b4105bd8c7)
-
-  2. Since 4 is less than 8, traverse to the left subtree of 8.
+  1. Starting from the root (8), compare 4 with the root's data. 
+  2. Since 4 is less than 8, traverse to the left subtree of 8. 
   3. Continuing the process, traverse through the left subtree of 8, then the right subtree of 4, and finally the left subtree of 6.
   4. Upon reaching the appropriate position, insert 4 as the left child of 6.
   5. After insertion, return the modified subtree to maintain the overall structure of the BST.
+
+![image](https://github.com/vansh-seth/DSA/assets/111755254/1d0df488-6505-41b7-8373-46b4105bd8c7)
+
+![image](https://github.com/vansh-seth/DSA/assets/111755254/b882aa22-520a-4bc6-9eff-33ede8b54dab)
+
 
 #### Importance of Returning Node:
 
