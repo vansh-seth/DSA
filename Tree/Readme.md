@@ -501,6 +501,7 @@ The insertion operation in a Binary Search Tree (BST) involves adding a new node
 
 ![image](https://github.com/vansh-seth/DSA/assets/111755254/b882aa22-520a-4bc6-9eff-33ede8b54dab)
 
+![image](https://github.com/vansh-seth/DSA/assets/111755254/b8c7e647-f28b-44c6-b66d-6f69fb768675)
 
 #### Importance of Returning Node:
 
