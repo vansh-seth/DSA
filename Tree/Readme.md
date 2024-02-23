@@ -503,6 +503,8 @@ The insertion operation in a Binary Search Tree (BST) involves adding a new node
 
 ![image](https://github.com/vansh-seth/DSA/assets/111755254/b8c7e647-f28b-44c6-b66d-6f69fb768675)
 
+![image](https://github.com/vansh-seth/DSA/assets/111755254/91ac5a9b-6876-49a6-abe3-45539ce9912e)
+
 #### Importance of Returning Node:
 
 - The return statement at the end of the function ensures that the tree structure remains intact during the upward recursion step.
