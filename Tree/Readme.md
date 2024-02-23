@@ -449,12 +449,17 @@ The search operation in a Binary Search Tree (BST) relies on the property that e
 
 #### Visualization:
 
+![image](https://github.com/vansh-seth/DSA/assets/111755254/46866867-3fb4-4edb-b6f1-9388c4efa366)
+
+
 - **Example**: Searching for value 4 in the BST
   1. Starting from the root (8), we compare 4 with the root's data.
   2. Since 4 is less than 8, we traverse to the left subtree of 8.
   3. Continuing the process, we traverse through the left subtree of 8, then the right subtree of 3, and finally the left subtree of 6.
   4. Upon finding the value 4, we return it.
   5. If the value is not found, eventually, we reach a leaf node with NULL, indicating the value is not present.
+
+
 
 #### Propagation:
 - As the search operation progresses recursively, if the value is found in any subtree, it is propagated up through the recursive calls until it is returned as the final result.
