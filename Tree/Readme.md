@@ -458,6 +458,7 @@ The search operation in a Binary Search Tree (BST) relies on the property that e
 
   3. Continuing the process, we traverse through the left subtree of 8, then the right subtree of 3, and finally the left subtree of 6. ![image](https://github.com/vansh-seth/DSA/assets/111755254/c1ab02bf-3b1e-44ec-8cd8-da7ea2c9ef69)
 
+  4. Upon finding the value 4, we return it. ![image](https://github.com/vansh-seth/DSA/assets/111755254/5679f488-71fe-497f-b4aa-3b9f8fb52790)
 
 
 
