@@ -453,8 +453,9 @@ The search operation in a Binary Search Tree (BST) relies on the property that e
 
 
 - **Example**: Searching for value 4 in the BST
-  1. Starting from the root (8), we compare 4 with the root's data.
-  2. Since 4 is less than 8, we traverse to the left subtree of 8.
+  1. Starting from the root (8), we compare 4 with the root's data. ![image](https://github.com/vansh-seth/DSA/assets/111755254/46866867-3fb4-4edb-b6f1-9388c4efa366)
+  2. Since 4 is less than 8, we traverse to the left subtree of 8. ![image](https://github.com/vansh-seth/DSA/assets/111755254/b704877d-e9ce-4c25-80ae-dd93b7377c9e)
+
   3. Continuing the process, we traverse through the left subtree of 8, then the right subtree of 3, and finally the left subtree of 6.
   4. Upon finding the value 4, we return it.
   5. If the value is not found, eventually, we reach a leaf node with NULL, indicating the value is not present.
