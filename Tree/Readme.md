@@ -746,3 +746,36 @@ After performing a right-left rotation, the tree is rebalanced:
   y   x
 ```
 
+## Algorithm to Insert a New Node in an AVL Tree
+
+When inserting a new node into an AVL tree, it's crucial to maintain its self-balancing property. The following algorithm outlines the steps to insert a new node while ensuring the AVL tree remains balanced:
+
+### Step 1: Find Leaf Node for Insertion
+
+1. Start from the root of the AVL tree.
+2. Compare the key of the new node (`newKey`) with the key of the current node (`rootKey`).
+3. If `newKey` is less than `rootKey`, recursively call the insertion algorithm on the left subtree until a leaf node is reached.
+4. If `newKey` is greater than `rootKey`, recursively call the insertion algorithm on the right subtree until a leaf node is reached.
+5. If `newKey` is equal to `rootKey`, return the leaf node.
+
+### Step 2: Insert the New Node
+
+1. Compare the key of the leaf node obtained from the previous step (`leafKey`) with `newKey`.
+2. If `newKey` is less than `leafKey`, make the new node the left child of the leaf node.
+3. Otherwise, make the new node the right child of the leaf node.
+4. Update the balance factor of nodes along the path from the root to the newly inserted node.
+
+### Step 3: Balance the Tree
+
+1. If the balance factor of any node becomes greater than 1 or less than -1 after insertion, the tree needs rebalancing.
+2. If the balance factor is greater than 1, perform a right rotation or left-right rotation:
+   - If `newNodeKey < leftChildKey`, perform a right rotation.
+   - Otherwise, perform a left-right rotation.
+3. If the balance factor is less than -1, perform a left rotation or right-left rotation:
+   - If `newNodeKey > rightChildKey`, perform a left rotation.
+   - Otherwise, perform a right-left rotation.
+
+### Step 4: Final Tree
+
+After balancing, the AVL tree should maintain its height balance property, ensuring efficient search, insertion, and deletion operations.
+
