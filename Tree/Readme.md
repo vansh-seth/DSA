@@ -555,6 +555,33 @@ When deleting a node from a Binary Search Tree (BST), there are three primary ca
 - **Efficient Removal**: The appropriate case is selected based on the structure of the node to be deleted, allowing for efficient removal while retaining the integrity of the tree.
 
 
+# AVL Tree
 
-Understanding these cases and their corresponding actions is essential for managing the structure and integrity of a Binary Search Tree during deletion operations.
+An AVL tree is a type of self-balancing binary search tree. It was named after its inventors, Georgy Adelson-Velsky and Landis.
+
+## Balance Factor
+
+In an AVL tree, each node maintains extra information called a balance factor. This factor can be one of three values: -1, 0, or +1. The balance factor of a node is determined by the difference in height between its left and right subtrees.
+
+Balance Factor = (Height of Left Subtree - Height of Right Subtree) or (Height of Right Subtree - Height of Left Subtree)
+
+The AVL tree's self-balancing property is governed by the balance factor. It ensures that the tree remains balanced and efficient for operations like insertion and deletion.
+
+## Example
+
+Here is an example of a balanced AVL tree:
+
+```
+          30
+        /    \
+      20      40
+     /  \    /  \
+   10   25  35   50
+```
+
+## Implementation Details
+
+To implement an AVL tree, it's essential to ensure that after each insertion or deletion, the balance factor of each node remains within the acceptable range of -1, 0, or +1. This involves performing rotations and other operations to maintain balance while updating the tree structure.
+
+The balance factor is crucial for keeping the tree height-balanced, which helps in achieving efficient search, insertion, and deletion operations.
 
