@@ -585,3 +585,51 @@ To implement an AVL tree, it's essential to ensure that after each insertion or 
 
 The balance factor is crucial for keeping the tree height-balanced, which helps in achieving efficient search, insertion, and deletion operations.
 
+
+## Operations on AVL Trees
+
+AVL trees support various operations to maintain balance and efficient search, insertion, and deletion. Among these operations, rotating subtrees plays a crucial role in AVL tree balancing.
+
+### Rotating Subtrees
+
+Rotations are fundamental operations in AVL trees used to maintain balance by adjusting the structure of the tree.
+
+#### Types of Rotations:
+
+1. **Left Rotation:**
+   - In a left rotation, the positions of the nodes in a subtree are interchanged to balance the tree.
+  
+   **Algorithm:**
+   1. If the node `y` has a left subtree, assign `x` as the parent of the left subtree of `y`.
+   2. Assign `x` as the parent of the left subtree of `y`.
+   3. If the parent of `x` is NULL, make `y` the root of the tree.
+   4. Else if `x` is the left child of `p`, make `y` the left child of `p`.
+   5. Else, assign `y` as the right child of `p`.
+   6. Change the parent of `x` to that of `y`.
+   7. Make `y` the parent of `x`.
+   8. Assign `y` as the parent of `x`.
+
+### Example:
+
+Consider the following AVL tree before and after a left rotation:
+
+**Before Left Rotation:**
+
+```
+      A
+     /
+    B
+     \
+      C
+```
+
+**After Left Rotation:**
+
+```
+      B
+     / \
+    A   C
+```
+
+Left rotation is essential for maintaining the balance factor of nodes in the AVL tree and ensuring efficient operations.
+
