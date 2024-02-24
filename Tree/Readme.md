@@ -812,3 +812,27 @@ When deleting a node from an AVL tree, it's crucial to maintain the tree's self-
 ### Step 5: Final Tree
 
 After rebalancing, the AVL tree should maintain its height balance property, ensuring efficient search, insertion, and deletion operations.
+
+## Complexities of Operations on an AVL Tree
+
+### Insertion:
+- **Complexity**: \( O(\log n) \)
+- Explanation: Due to the self-balancing nature of AVL trees, insertion operations maintain the tree's balanced structure, resulting in a time complexity of \( O(\log n) \) where \( n \) is the number of nodes in the tree.
+
+### Deletion:
+- **Complexity**: \( O(\log n) \)
+- Explanation: Similar to insertion, deletion in AVL trees also has a time complexity of \( O(\log n) \) due to the need for rebalancing after removal of nodes to maintain the balanced property of the tree.
+
+### Search:
+- **Complexity**: \( O(\log n) \)
+- Explanation: Searching in an AVL tree has a time complexity of \( O(\log n) \) because AVL trees are balanced binary search trees, ensuring that the search space is divided in half at each step of the search process.
+
+## AVL Tree Applications
+
+AVL trees find applications in various domains, including:
+
+1. **Indexing Large Records in Databases**:
+   - AVL trees are commonly used in database management systems for indexing large records. They facilitate efficient search, insertion, and deletion operations, making them suitable for managing large datasets.
+
+2. **Searching in Large Databases**:
+   - AVL trees provide efficient search capabilities, which makes them suitable for use in large databases where quick retrieval of data based on key values is crucial for performance.
