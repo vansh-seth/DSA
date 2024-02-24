@@ -679,3 +679,70 @@ Consider the following AVL tree before and after a right rotation:
 ```
 
 Right rotation transforms the arrangement of nodes, ensuring the tree maintains its balance factor and optimal structure.
+
+## Left-Right and Right-Left Rotation in AVL Trees
+
+In AVL trees, left-right and right-left rotations are composite operations used to restore balance when the tree becomes unbalanced due to insertions or deletions. These rotations involve a sequence of left and right rotations to maintain the AVL tree's height balance property.
+
+### Left-Right Rotation
+
+In left-right rotation, the subtree undergoes a left rotation followed by a right rotation to rebalance the tree.
+
+#### Algorithm:
+
+1. **Left Rotation on \(x-y\):**
+   - Perform a left rotation on nodes \(x\) and \(y\).
+
+2. **Right Rotation on \(y-z\):**
+   - Perform a right rotation on nodes \(y\) and \(z\).
+
+### Right-Left Rotation
+
+In right-left rotation, the subtree undergoes a right rotation followed by a left rotation to restore balance.
+
+#### Algorithm:
+
+1. **Right Rotation on \(x-y\):**
+   - Perform a right rotation on nodes \(x\) and \(y\).
+
+2. **Left Rotation on \(z-y\):**
+   - Perform a left rotation on nodes \(z\) and \(y\).
+
+### Example:
+
+Consider the following unbalanced AVL tree requiring a left-right rotation:
+
+```
+    x
+     \
+      y
+       \
+        z
+```
+
+After performing a left-right rotation, the tree is rebalanced:
+
+```
+    z
+   / \
+  x   y
+```
+
+Similarly, for a tree requiring a right-left rotation:
+
+```
+    x
+   /
+  y
+ /
+z
+```
+
+After performing a right-left rotation, the tree is rebalanced:
+
+```
+    z
+   / \
+  y   x
+```
+
