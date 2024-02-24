@@ -779,3 +779,36 @@ When inserting a new node into an AVL tree, it's crucial to maintain its self-ba
 
 After balancing, the AVL tree should maintain its height balance property, ensuring efficient search, insertion, and deletion operations.
 
+
+## Algorithm to Delete a Node in an AVL Tree
+
+When deleting a node from an AVL tree, it's crucial to maintain the tree's self-balancing property. The following algorithm outlines the steps to delete a node while ensuring the AVL tree remains balanced:
+
+### Step 1: Locate Node to Be Deleted
+
+1. Recursively locate the node to be deleted (`nodeToBeDeleted`) starting from the root of the AVL tree.
+
+### Step 2: Delete the Node
+
+1. Determine the case for deleting the node:
+   - If `nodeToBeDeleted` is a leaf node (has no children), remove it.
+   - If `nodeToBeDeleted` has one child, substitute its contents with that of the child and remove the child.
+   - If `nodeToBeDeleted` has two children, find the inorder successor `w` (node with the minimum key value in the right subtree).
+  
+### Step 3: Update Balance Factors
+
+1. Update the balance factors of nodes along the path from the root to the parent of the removed node.
+  
+### Step 4: Rebalance the Tree
+
+1. If the balance factor of any node is not -1, 0, or 1 after deletion, rebalance the tree using rotations:
+   - If the balance factor of the current node (`currentNode`) is greater than 1:
+     - If the balance factor of the left child is greater than or equal to 0, perform a right rotation.
+     - Otherwise, perform a left-right rotation.
+   - If the balance factor of the current node is less than -1:
+     - If the balance factor of the right child is less than or equal to 0, perform a left rotation.
+     - Otherwise, perform a right-left rotation.
+
+### Step 5: Final Tree
+
+After rebalancing, the AVL tree should maintain its height balance property, ensuring efficient search, insertion, and deletion operations.
