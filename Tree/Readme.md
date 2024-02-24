@@ -633,3 +633,49 @@ Consider the following AVL tree before and after a left rotation:
 
 Left rotation is essential for maintaining the balance factor of nodes in the AVL tree and ensuring efficient operations.
 
+
+## Right Rotation in AVL Trees
+
+In an AVL tree, right rotation is a fundamental operation used to maintain balance by rearranging the positions of nodes within a subtree.
+
+### Right Rotation Algorithm
+
+Let's outline the steps for performing a right rotation:
+
+1. **Initial Setup:** Consider the initial tree structure.
+   
+   ![Initial Tree](initial_tree.png)
+
+2. **Right Rotation:**
+   - If node `x` has a right subtree, assign node `y` as the parent of the right subtree of `x`.
+   - Assign `y` as the parent of the right subtree of `x`.
+   - If the parent of `y` is NULL, make `x` the root of the tree.
+   - Else if `y` is the right child of its parent `p`, make `x` the right child of `p`.
+   - Otherwise, assign `x` as the left child of `p`.
+   - Assign the parent of `y` as the parent of `x`.
+   - Make `x` the parent of `y`.
+   - Assign `x` as the parent of `y`.
+
+### Example:
+
+Consider the following AVL tree before and after a right rotation:
+
+**Before Right Rotation:**
+
+```
+      A
+       \
+        B
+       /
+      C
+```
+
+**After Right Rotation:**
+
+```
+      B
+     / \
+    A   C
+```
+
+Right rotation transforms the arrangement of nodes, ensuring the tree maintains its balance factor and optimal structure.
